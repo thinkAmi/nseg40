@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>NSEG #40 Twilio デモ</title>
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h1>NSEG #40 Twilio デモ</h1>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <form action="/memorize" method="POST">
+                    <fieldset>
+                        <legend>再生するテキストの保存</legend>
+                        <div>
+                            <label for="message">再生内容</label>
+                            <input type="text" name="message" id="message" class = "input-large" placeholder="再生内容を入れてください">
+                        </div>
+
+                        <input type="submit" value="保存する"  class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="span4">
+                <form action="/call" method="POST">
+                    <fieldset>
+                        <legend>携帯に電話をかけてテキストを再生</legend>
+                        <input type="submit" value="携帯に電話する" class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="span4">
+                <form action="/list" method="GET">
+                    <fieldset>
+                        <legend>録音の一覧</legend>
+                        <input type="submit" value="一覧を表示する" class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+            <div class="span4">
+                <form action="/cevio" method="POST">
+                    <fieldset>
+                        <legend>携帯に電話をかけてwavファイルを再生</legend>
+                        <input type="submit" value="携帯に電話する(wav)" class="btn btn-large" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

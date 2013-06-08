@@ -1,0 +1,13 @@
+<% @recordings.each_with_index do |r, i| %>
+    <div class="row">
+        <div class="span1">No. <%= i + 1 %></div>
+        <div class="span3">記録日時：<%= make_time(r.date_created) %></div>
+        <div class="span1">
+            <a href=<%= r.mp3 %> target="_blank">再生</a>
+        </div>
+        <div class="span1">
+            <a href=<%= @delete_url + r.sid %>>削除</a>
+        </div>
+    </div>
+    <hr>
+<% end %>
